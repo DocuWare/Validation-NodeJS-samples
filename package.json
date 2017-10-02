@@ -1,0 +1,11 @@
+{
+    "name": "validation-example",
+    "version": "1.0.0",
+    "main": "server.js",
+    "dependencies": {
+        "express" : "4.15.4",
+        "body-parser": "1.18.1",
+        "validator": "8.2.0",
+        "unirest": "0.5.1"
+    }
+}  
