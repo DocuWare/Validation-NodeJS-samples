@@ -26,7 +26,7 @@ You can even host it on platforms like Mircosoft Azure, Cloud9 or Heroku.
 2.	Clone the sources: `git clone https://github.com/DocuWare/Validation-NodeJS-samples.git`
 3.	In the command prompt navigate to the folder where the sample app was cloned.
 4.	Enter following command for installing all required NodeJS modules: `npm install`
-5.	Edit & check all settings from [DWValidatonSettings.js](../blob/master/DWValidatonSettings.js) that comes with the application.
+5.	Edit & check all settings from [DWValidatonSettings.js](../master/DWValidationSettings.js) that comes with the application.
 6.	Go back command prompt and start application with this command: `node server.js`
 
 Now you receive a message that the validation service was successfully started.
@@ -38,7 +38,7 @@ Setting up your own validations is really easy with NodeJS:
 1.	Install Visual Studio Code as editor for NodeJS.
 Follow this tutorial: https://code.visualstudio.com/docs/nodejs/nodejs-tutorial
 2.  Load the workspace folder of the sample application into Visual Studio Code.
-3.  Modify or extend [validationsBeforeStoring.js](../blob/master/validationsBeforeStoring.js) according to your needs.
+3.  Modify or extend [validationsBeforeStoring.js](../master/validationsBeforeStoring.js) according to your needs.
 
 **_ NOTE: Don’t touch the server.js otherwise your application may not work correctly. _**
 
