@@ -141,7 +141,7 @@ The expected response is JSON with the following structure:
 // Failed validation
 {
 	"Status": "Failed",
-	"Reason": "You're input is not OK! Check the values!"
+	"Reason": "Your input is not OK! Check the values!"
 }
 ```
 
