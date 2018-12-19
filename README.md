@@ -1,4 +1,4 @@
-# Sample REST sevice for new validation with DocuWare 6.12
+# Sample REST service for new validation with DocuWare 6.12
 > A sample REST validation engine provided as NodeJS for use with DocuWare Cloud and DocuWare 6.12 (and above)
 
 
@@ -93,7 +93,7 @@ Data which will be send to the validation service will look like this:
 ```
 
 ###### TimeStamp
-Time stamp of the request. Datetime in UTC formatted in the [Roundtrip Roundtrip format](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip)
+Time stamp of the request. Datetime in UTC formatted in the [Roundtrip format](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip)
 
 ###### UserName
 The long name of the DocuWare user that requests the validation.
