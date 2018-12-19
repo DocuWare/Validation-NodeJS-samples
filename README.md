@@ -120,8 +120,8 @@ A list of values to be validated. Each value contains the following elements:
  * `Int` - Value element is Int32 or Int64 formatted in Invariant culture. Example: 1243
  * `Decimal` - Value element is Decimal formatted in Invariant culture. Example: 123.45
  * `Memo` - Value element element is string in quotation marks. "Some long text"
- * `Date` - Date in UTC formatted in the [Roundtrip Roundtrip format](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip) always in midnight. Example: "2017-04-01T00:00:00Z"
- * `DateTime` - Datetime in UTC formatted in the [Roundtrip Roundtrip format](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip). Example: "2017-04-02T12:30:00Z"
+ * `Date` - Date in UTC formatted in the [Roundtrip format](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip) always in midnight. Example: "2017-04-01T00:00:00Z"
+ * `DateTime` - Datetime in UTC formatted in the [Roundtrip format](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#Roundtrip). Example: "2017-04-02T12:30:00Z"
  * `Keywords` - Element contains subelement "Keyword" with value array of strings. Example: 
 	`{"Keyword": ["keyword1", "keyword2","keyword3"]}`
 * `Item` - The value of the field formatted as described above.
