@@ -1,24 +1,24 @@
-# Sample REST service for new validation with DocuWare 6.12
+# Sample REST service for validation
 > A sample REST validation engine provided as NodeJS for use with DocuWare Cloud and DocuWare 6.12 (and above)
 
 
-With the release of DocuWare 6.12 you're now able to simply verify all index fields before the actual storage to the file cabinet. It's so comfortable to use and flexible for so many scenarios.
+Since the release of DocuWare 6.12 it is possible with the document validation to simply verify all index fields before the actual storage to the file cabinet. It's so comfortable to use and flexible for so many scenarios.
 
 Creating dynamic mandatory fields or lookups to external data or to DocuWare before storing is so easy.
 The best? The user is being directly notified in the DocuWare webclient in case of wrong entries.
 [Get an overview on sample validations coming with this service](#features)
 
-The new validation inside DocuWare requires a REST service in order to send all index entries to this.
+The validation inside DocuWare requires a REST service in order to send all index entries to this.
 With this sample application we're going to show you how easily you can setup your own validation webservice.
 
 
 
 ## Installing validation REST service locally / Getting started with NodeJS
-As the new validation only requires a REST service we've provided this sample app for NodeJS.
+As the document validation only requires a REST service we've provided this sample app for NodeJS.
 It's not required to run your validation service on the same DocuWare server.
 You can even host it on platforms like Mircosoft Azure, Cloud9 or Heroku.
 
-**Make sure that you running the latest version of DocuWare 6.12 for the sample validatios.**
+**Make sure that you running the latest version of DocuWare or at least 6.12 for the sample validations.**
 
 1.	Install latest version of NodeJS https://nodejs.org/en/
 	a. Install with all options activated
@@ -152,7 +152,7 @@ The status of the validation. For successful validation the expected value is "O
 Reason for the failed validation. This is the message that is shown to the user.
 
 ## Register validation service in DocuWare
-1. Open open DocuWare configuration and edit the details of the desired store dialog.
+1. Open DocuWare configuration and edit the details of the desired store dialog.
 **_ NOTE: You can also configure validation in info dialogs. So it will be triggered on every updated document. _**
 2. Register this URL as your validation web service URL: http://127.0.0.1:4444/api (applies to locally running validation service)
 3. After testing the availability of the service you can store your changes.
@@ -175,12 +175,12 @@ You can setup your DBFields in the config file accordingly.
 
 
 ##### 2. Check for project on quotes
-Just like above a similar check is being executed. Now this if the doc. type contains “quote” it will look for a proper project field.
+Just like above a similar check is being executed. Now this if the doc.type contains “quote” it will look for a proper project field.
 <br />
 
 
 ##### 3. Check for already existing invoices before storing
-This is a bit more complex check. Before storing any document of doc. type “invoice” it will check via a Platform REST API call if a similar document with the same **document number, document date and supplier** is already existing.
+This is a bit more complex check. Before storing any document of doc.type “invoice” it will check via a Platform REST API call if a similar document with the same **document number, document date and supplier** is already existing.
 **_ NOTE: Configure DocuWare connection and search dialog GUID accordingly in the settings file. _**
 <br />
 
