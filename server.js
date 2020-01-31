@@ -1,5 +1,8 @@
 // call the packages we need
+var fs         = require('fs');
+var constants  = require('constants');
 var express    = require('express');        // call express
+var https      = require('https');
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var validations = require('./validationsBeforeStoring');	//actual validation logic
@@ -16,13 +19,13 @@ app.use(bodyParser.json());
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
 
-// test route to make sure everything is working (http://127.0.0.1:4444/api)
+// test route to make sure everything is working (http/https://127.0.0.1:4444/api)
 router.get('/', function(req, res) {
 	res.json({Status: 'OK', Reason: 'Validation web service is up and running' });
 });
 
 
-// register route for DocuWare calls (also accessible at http://127.0.0.1:4444/api)
+// register route for DocuWare calls (also accessible at http/https://127.0.0.1:4444/api)
 router.post('/', function(req, res) {
 	var DWInputValues = req.body;
 	
@@ -53,7 +56,18 @@ app.use('/api', router);
 // START THE SERVER
 // =============================================================================
 var port = process.env.PORT || 4444;        // set our port
-app.listen(port);
 
+// Strait http
+//app.listen(port);
 
-console.log("Validation REST service is up and running");
+// HTTPS TLS 1.2 only
+// create cert files openssl req -nodes -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -subj "/CN=localhost"  
+https.createServer( {
+		key: fs.readFileSync('key.pem'), 
+		cert: fs.readFileSync('cert.pem'),
+		secureOptions: constants.SSL_OP_NO_SSLv2 | constants.SSL_OP_NO_SSLv3 | constants.SSL_OP_NO_TLSv1 | constants.SSL_OP_NO_TLSv1_1
+	}, 
+	app)
+	.listen(port);
+
+console.log(`Validation REST service is up and running on port ${port} with http and https as well`);
