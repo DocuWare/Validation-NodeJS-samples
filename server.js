@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
 router.post('/', function(req, res) {
 	var DWInputValues = req.body;
 	
-	if (DWInputValues.Values.length > 0) {
+	if (DWInputValues.Values && DWInputValues.Values.length > 0) {
 		//call our validations
 		console.log(DWInputValues)
 		validations.checkValues(DWInputValues)
