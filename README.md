@@ -16,7 +16,7 @@ With this sample application we're going to show you how easily you can setup yo
 ## Installing validation REST service locally / Getting started with NodeJS
 As the document validation only requires a REST service we've provided this sample app for NodeJS.
 It's not required to run your validation service on the same DocuWare server.
-You can even host it on platforms like Mircosoft Azure, Cloud9 or Heroku.
+You can even host it on platforms like Microsoft Azure, Cloud9 or Heroku.
 
 **Make sure that you running the latest version of DocuWare or at least 6.12 for the sample validations.**
 
